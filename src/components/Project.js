@@ -26,6 +26,7 @@ const Content = styled.div`
 `;
 const ImgBox = styled.div`
   width: 85%;
+  margin-bottom: 1rem;
 `;
 
 const OrderNum = styled.nav`
@@ -44,22 +45,24 @@ const ReadMe = styled.div`
 `;
 const Img = styled.img`
   width: 100%;
+  border: 1px solid black;
+  border-radius: 1rem;
 `;
-function Project({title, subtitle, img, descript, tags}) {
+function Project({data}) {
   return (
     <Container>
-      <Title>제목</Title>
-      <SubTitle>날짜, 인원</SubTitle>
+      <Title>{data.name}</Title>
+      <SubTitle>{data.date}</SubTitle>
       <Content>
         <ImgBox>
-          <Img src="/img/nostanding/nostanding1.jpeg" />
-          <OrderNum>1/5</OrderNum>
+          <Img src={data.img[1]} />
+          <OrderNum>1 / {data.img.length}</OrderNum>
         </ImgBox>
         <TextBox>
           <ReadMe>
-            설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설명설
+            {data.mainDescript}
           </ReadMe>
-          <ProjectTag />
+          {data.tagDescript.map((data, idx) => <ProjectTag key={idx} tag={data} />)}
         </TextBox>
       </Content>
     </Container>

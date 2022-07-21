@@ -24,14 +24,25 @@ const Value = styled.div`
   vertical-align: bottom;
   font-size: 1rem;
 `;
-function ProjectTag() {
+const LinkValue = styled.a`
+  width: calc(100% - 8.4rem);
+  vertical-align: bottom;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(76,157,224);
+  :hover{
+    text-decoration: underline;
+  }
+`;
+function ProjectTag({tag}) {
+  console.log(tag.isLink);
   return (
     <Container>
       <Lable>
         <FontAwesomeIcon icon={faCheck} />
-        <div>이름</div>
+        <div>{tag.lable}</div>
       </Lable>
-      <Value>설명</Value>
+      {tag.isLink? <LinkValue href={tag.value} target="_blank">{tag.value}</LinkValue> : <Value>{tag.value}</Value> }
     </Container>
   );
 }
