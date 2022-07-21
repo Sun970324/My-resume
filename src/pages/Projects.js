@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Project from "../components/Project";
 import Title from "../components/Title";
 const Article = styled.article`
   display: block;
@@ -16,6 +17,9 @@ function Projects() {
     <Article>
       <Container>
         <Title name={"Projects"} isWhite={true} />
+        <Project />
+        <Project />
+        <Project />
       </Container>
     </Article>
   );

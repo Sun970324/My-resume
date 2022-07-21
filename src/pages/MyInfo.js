@@ -16,6 +16,27 @@ const Contents = styled.div`
   flex-flow: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media (max-width: 650px) {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+`;
+const Button = styled.div`
+  width: 50%;
+  padding: .8rem;
+  height: 3rem;
+  margin: 5px auto;
+  max-width: 14rem;
+  border: none;
+  border-radius: 10rem;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: rgb(244, 97, 58);
+  cursor: pointer;
 `;
 function MyInfo() {
   const info = [
@@ -33,6 +54,7 @@ function MyInfo() {
           {info.map((el, idx) => (
             <Tags key={idx} img={el.img} lable={el.lable} value={el.value} />
           ))}
+        <Button>Read More →</Button>
         </Contents>
       </Container>
     </Article>

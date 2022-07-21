@@ -6,7 +6,6 @@ const Container = styled.header`
   right: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(153, 153, 153, 0.5);
   height: 70px;
   padding: 0 30px;
   display: flex;
@@ -15,14 +14,19 @@ const Container = styled.header`
   z-index: 10;
 `;
 const Logo = styled.h1`
-  font-size: 2em;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsla(0,0%,100%,.7);
 `;
 const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   div {
-    color: black;
-    padding: 0 15px;
+    color: hsla(0,0%,100%,.7);;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 2rem;
     cursor: pointer;
     :hover {
       color: red;
