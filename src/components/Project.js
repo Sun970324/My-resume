@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import ImgSlider from "./ImgSlider";
 import ProjectTag from "./ProjectTag";
+
 const Container = styled.div`
   background-color: white;
   padding: 3rem;
   border-radius: 1rem;
   margin: 0 auto 2rem;
+  width: 80%;
 `;
 const Title = styled.div`
   padding-bottom: 0.5rem;
@@ -43,20 +46,16 @@ const ReadMe = styled.div`
   margin-bottom: 1rem;
   border-bottom: 1px solid rgb(204, 204, 204);
 `;
-const Img = styled.img`
-  width: 100%;
-  border: 1px solid black;
-  border-radius: 1rem;
-`;
 function Project({data}) {
+  const [curentImg, setCurrentImg] = useState('1')
   return (
     <Container>
       <Title>{data.name}</Title>
       <SubTitle>{data.date}</SubTitle>
       <Content>
         <ImgBox>
-          <Img src={data.img[1]} />
-          <OrderNum>1 / {data.img.length}</OrderNum>
+          <ImgSlider img={data.img} setCurrentImg={setCurrentImg} />
+          <OrderNum>{curentImg} / {data.img.length}</OrderNum>
         </ImgBox>
         <TextBox>
           <ReadMe>

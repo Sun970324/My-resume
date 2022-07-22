@@ -35,7 +35,6 @@ const LinkValue = styled.a`
   }
 `;
 function ProjectTag({tag}) {
-  console.log(tag.isLink);
   return (
     <Container>
       <Lable>

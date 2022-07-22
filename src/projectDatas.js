@@ -10,7 +10,6 @@ const datas = [
       "/img/nostanding/nostanding5.png",
       "/img/nostanding/nostanding6.png",
       "/img/nostanding/nostanding7.png",
-      "/img/nostanding/nostanding8.png",
     ],
     mainDescript:
       "Nostanding은 인기 음식점, 카페에 가고싶은데 줄을 서기 싫은 사람들을 위한 예약 서비스입니다. 코드스테이츠 수강 중 두 번째로 진행한 프로젝트이며, 첫 번째 프로젝트를 진행하며 부족하다고 생각한 부분들을 개선하여 기획 / 개발하였습니다. Redux를 이용하여 효율적인 상태관리를 할 수 있게되었고 프로젝트 진행 중 Redux-persist를 공부하고 적용시켜 로컬스토리지를 다루는 것에 익숙해졌습니다. 로딩인디케이터를 적용하여 UX,UI 측면에서 완성도를 높였습니다. 또한 예약기능, 알림기능, 리뷰작성, 태그/검색 기능 등 많은 기능들을 구현하며 Front-End 개발역량을 향상시켰습니다.",
@@ -75,12 +74,12 @@ const datas = [
     date: "2022.07 (1주 / 1人 프로젝트)",
     img: [],
     mainDescript:
-      "지금 보시는 이 페이지 또한 하나의 미니 프로젝트로 기획했습니다. 저의 포트폴리오와 이력을 담아낸 페이지로 React를 이용하여 개발했으며, 능률을 위한 컴포넌트 계획을 효율적으로 계획했습니다. UX,UI를 고려하여 만들었습니다.",
+      "지금 보시는 이 페이지 또한 하나의 미니 프로젝트로 기획했습니다. 저의 포트폴리오와 이력을 담아낸 페이지로 React를 이용하여 개발했으며, 능률을 위해 컴포넌트를 효율적으로 계획했습니다. UX,UI를 고려하여 만들었습니다.",
     tagDescript: [
       {
         lable: "주요기능",
         value:
-          "간단한 자기소개, 인적 사항,  GitHub 및 노션 링크, 프로젝트 경험",
+          "자기소개, 인적 사항, GitHub 및 노션 링크, 프로젝트",
           isLink: false
       },
       {

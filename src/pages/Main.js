@@ -6,7 +6,7 @@ const Container = styled.div`
       rgba(112, 93, 80, 0.8) 0,
       rgba(112, 93, 80, 0.8) 90%
     ),
-    url('/img/main.jpeg') 50% no-repeat;
+    url('/img/main.jpg') 50% no-repeat;
     z-index: -1;
     background-size: cover;
 `;
