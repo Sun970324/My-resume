@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import Tags from "../components/Tags";
 import Title from "../components/Title";
@@ -24,7 +24,7 @@ const Contents = styled.div`
 `;
 const Button = styled.div`
   width: 50%;
-  padding: .8rem;
+  padding: 0.8rem;
   height: 3rem;
   margin: 5px auto;
   max-width: 14rem;
@@ -38,7 +38,7 @@ const Button = styled.div`
   background-color: rgb(244, 97, 58);
   cursor: pointer;
 `;
-function MyInfo() {
+const MyInfo = forwardRef((props, ref) => {
   const info = [
     { img: "user", lable: "이름", value: "윤선웅" },
     { img: "calinder", lable: "생년월일", value: "1997.03.24" },
@@ -47,18 +47,17 @@ function MyInfo() {
     { img: "email", lable: "이메일", value: "ysw5202222@gmail.com" },
   ];
   return (
-    <Article>
+    <Article ref={ref}>
       <Container>
-        <Title name={"About me"} />
+        <Title name={"About me"} clicked={props.onAboutClick}/>
         <Contents>
           {info.map((el, idx) => (
             <Tags key={idx} img={el.img} lable={el.lable} value={el.value} />
           ))}
-        <Button>Read More →</Button>
         </Contents>
       </Container>
     </Article>
   );
-}
+});
 
 export default MyInfo;

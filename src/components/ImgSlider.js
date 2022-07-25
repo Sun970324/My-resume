@@ -7,24 +7,27 @@ const Container = styled.div`
   overflow: hidden;
 `;
 const StyledSlider = styled(Slider)`
-    .slick-slide div{
-      outline: none;
-    }
+  .slick-slide div {
+    outline: none;
+  }
 `;
 const Img = styled.img`
   border: 1px solid black;
   border-radius: 1rem;
   height: 500px;
   width: 500px;
+  object-fit: scale-down;
 `;
 function ImgSlider({ img, setCurrentImg }) {
   const settings = {
-    beforeChange : (slide, newSlide) => setCurrentImg(newSlide+1),
+    beforeChange: (slide, newSlide) => setCurrentImg(newSlide + 1),
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
   return (
     <Container>

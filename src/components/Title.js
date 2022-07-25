@@ -10,6 +10,7 @@ const Container = styled.div`
   position: relative;
   margin: 0 auto 3rem;
   svg {
+    color: ${(props)=> props.isWhite? 'white': 'black'};
     padding: 5px 5px 0 0;
     opacity: 0.6;
     width: 2rem;
@@ -29,10 +30,10 @@ const Lable = styled.div`
     font-weight: 400;
     line-height: 1.5;
 `
-function Title({ name, isWhite }) {
+function Title({ name, isWhite, clicked }) {
   return (
-    <Container>
-      <FontAwesomeIcon icon={faLink} />
+    <Container isWhite={isWhite}>
+      <FontAwesomeIcon icon={faLink} onClick={clicked} />
       <Lable isWhite={isWhite}>{name}</Lable>
     </Container>
   );

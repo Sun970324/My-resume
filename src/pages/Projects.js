@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import Project from "../components/Project";
 import Title from "../components/Title";
@@ -13,15 +13,17 @@ const Container = styled.div`
   background-color: rgb(28, 128, 159);
 `;
 
-function Projects() {
+const Projects = forwardRef((props, ref) => {
   return (
-    <Article>
+    <Article ref={ref}>
       <Container>
-        <Title name={"Projects"} isWhite={true} />
-        {datas.map((data, idx) => <Project key={idx} data={data} />)}
+        <Title name={"Projects"} isWhite={true} clicked={props.onProjectClick} />
+        {datas.map((data, idx) => (
+          <Project key={idx} data={data} />
+        ))}
       </Container>
     </Article>
   );
-}
+});
 
 export default Projects;
