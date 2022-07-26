@@ -26,7 +26,7 @@ const HrLine = styled.hr`
   height: 0;
   margin: 1.5rem auto;
   border: none;
-  border-top: 0.2rem solid rgb(244, 97, 58);
+  border-top: 0.2rem solid rgb(244,97,58);
 `;
 const Texts = styled.div`
   font-size: 1.25rem;
@@ -45,25 +45,41 @@ const Button = styled.div`
   text-align: center;
   font-weight: 400;
   text-decoration: none;
-  background-color: rgb(244, 97, 58);
+  background-color: rgb(244,97,58);
   cursor: pointer;
 `;
+const Quote = styled.div`
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+  font-style: italic;
+`
+const Intro = styled.div`
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+`
 const Main = forwardRef((props, ref) => {
   return (
     <Container ref={ref}>
       <Contents>
-        <Name>- 윤선웅 -</Name>
+        <Name>윤선웅</Name>
         <br />
         <Name>포트폴리오</Name>
         <HrLine />
         <Texts>
-          안녕하세요.
+          <Quote>
+          "개발자라는 직업은 '성장'이라는 키워드에서 볼 때 가장 절정에 있는 직업이 아닐까 싶다."
+          </Quote>
+          <Intro>
+           - 오늘부터 개발자 中 -
+           </Intro>
           <br />
-          성장하고 배우는 것을 좋아하는 웹개발자입니다.
-          <br />
-          긍정적인 사고, 끈기, 기술 습득력이 저의 장점입니다.
+          반갑습니다, 성장형 개발자 윤선웅입니다.
         </Texts>
-        <Button onClick={props.onAboutClick}>더 알아보기 ↓</Button>
+        <Button onClick={props.onAboutClick}>About me ↓</Button>
       </Contents>
     </Container>
   );

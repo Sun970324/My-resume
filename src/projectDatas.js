@@ -13,6 +13,7 @@ const datas = [
     ],
     mainDescript:
       "Nostanding은 인기 음식점, 카페에 가고싶은데 줄을 서기 싫은 사람들을 위한 예약 서비스입니다. 코드스테이츠 수강 중 두 번째로 진행한 프로젝트이며, 첫 번째 프로젝트를 진행하며 부족하다고 생각한 부분들을 개선하여 기획 / 개발하였습니다. Redux를 이용하여 효율적인 상태관리를 할 수 있게되었고 프로젝트 진행 중 Redux-persist를 공부하고 적용시켜 로컬스토리지를 다루는 것에 익숙해졌습니다. 로딩인디케이터를 적용하여 UX,UI 측면에서 완성도를 높였습니다. 또한 예약기능, 알림기능, 리뷰작성, 태그/검색 기능 등 많은 기능들을 구현하며 Front-End 개발역량을 향상시켰습니다.",
+      contributions:'',
     tagDescript: [
       {
         lable: "주요기능",
@@ -51,6 +52,7 @@ const datas = [
     ],
     mainDescript:
       "Defat은 식단 관리 보조 서비스입니다. 다이어트 식단을 추천해주고 사용자가 먹은 식단을 기록해주는 서비스를 제공하여 식단 관리에 도움을 주고자 기획한 프로젝트입니다. 처음으로 진행한 프로젝트이며, Github를 통한 협업 방식과 프로젝트 기획단계에서 사용하는 툴(Figma, miro)을 익힐 수 있었습니다. 검색 기능, 로그인, 식단추가하기 등 기능을 구현하며 개발을 할 때 프로세스를 익힐 수 있게 한 프로젝트입니다.",
+      contributions:'',
     tagDescript: [
       {
         lable: "주요기능",
@@ -84,7 +86,7 @@ const datas = [
     tagDescript: [
       {
         lable: "주요기능",
-        value: "자기소개, 인적 사항, GitHub 및 노션 링크, 프로젝트",
+        value: "자기소개, 인적 사항, GitHub 및 노션 링크, 프로젝트소개",
         isLink: false,
       },
       {
@@ -92,7 +94,7 @@ const datas = [
         value: "https://github.com/Sun970324/My-resume",
         isLink: true,
       },
-      { lable: "URL", value: "https://d2a85jn5sydpym.cloudfront.net/", isLink: true },
+      { lable: "URL", value: "https://d38hyiyauvg907.cloudfront.net/", isLink: true },
     ],
   },
 ];

@@ -1,4 +1,5 @@
 import React, { forwardRef } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Tags from "../components/Tags";
 import Title from "../components/Title";
@@ -16,6 +17,22 @@ const Contents = styled.div`
   flex-flow: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  a {
+    color: white;
+    text-decoration: none;
+    width: 50%;
+    padding: 0.8rem;
+    height: 3rem;
+    margin: 5px auto;
+    max-width: 14rem;
+    border: none;
+    border-radius: 10rem;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+    background-color: rgb(244, 97, 58);
+    cursor: pointer;
+  }
   @media (max-width: 650px) {
     display: flex;
     flex-direction: column;
@@ -33,11 +50,12 @@ const MyInfo = forwardRef((props, ref) => {
   return (
     <Article ref={ref}>
       <Container>
-        <Title name={"About me"} clicked={props.onAboutClick}/>
+        <Title name={"About me"} />
         <Contents>
           {info.map((el, idx) => (
             <Tags key={idx} img={el.img} lable={el.lable} value={el.value} />
           ))}
+          <Link to="/aboutme">Read More →</Link>
         </Contents>
       </Container>
     </Article>

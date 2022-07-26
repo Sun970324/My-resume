@@ -8,14 +8,14 @@ const Container = styled.div`
   border-radius: 2rem;
   background-color: white;
   cursor: pointer;
-  img{
+`
+const Img = styled.img`
     width: 100%;
-  }
 `
 function FooterImg({logo}) {
   return (
   <Container>
-    <img src={logo} alt={logo} />
+    <Img src={logo} alt={logo} />
   </Container>
   )
 }

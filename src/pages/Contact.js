@@ -35,8 +35,8 @@ const Message = styled.textarea`
 const Button = styled.button`
   width: 10em;
   height: 4em;
-  background-color: rgb(249, 197, 30);
-  color: black;
+  background-color: rgb(46, 142, 255);
+  color: white;
   font-weight: 500;
   border-radius: 0.5rem;
   border: 0px;
@@ -58,21 +58,17 @@ const Contact = forwardRef((props, ref) => {
       email,
       message,
     };
-    send('service_ndqrukt','template_q5pycjr', templateParams)
-    alert('이메일 보내주심에 감사합니다. 2일 이내에 회신하겠습니다.')
-    setUserName('')
-    setPhone('')
-    setEmail('')
-    setMessage('')
+    send("service_ndqrukt", "template_q5pycjr", templateParams);
+    alert("이메일 보내주심에 감사합니다. 2일 이내에 회신하겠습니다.");
+    setUserName("");
+    setPhone("");
+    setEmail("");
+    setMessage("");
   };
   return (
     <Article>
       <Container ref={ref} onSubmit={sendEmail}>
-        <Title
-          name={"Contact"}
-          isWhite={false}
-          clicked={props.onContactClick}
-        />
+        <Title name={"Contact"} isWhite={false} />
         <Label>* 이름</Label>
         <Input
           type="text"

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { getScrollY } from "../store";
 const Container = styled.header`
   position: fixed;
   display: flex;
@@ -83,16 +84,14 @@ const LineDiv = styled.div`
     top: 20px;
   }
 `;
-function Header({
-  scrollY,
-  onHomeClick,
-  onAboutClick,
-  onSkillClick,
-  onProjectClick,
-  onContactClick,
+function InfoHeader({
+  scrollY,getScrollY
 }) {
   const [openMenu, setOpenMenu] = useState(false);
   const clickOpenHandle = () => setOpenMenu(!openMenu);
+  useEffect(()=> {
+    getScrollY(0)
+  },[])
   return (
     <Container scrollY={scrollY}>
       <Link to="/">
@@ -106,37 +105,31 @@ function Header({
         </LineDiv>
         <Div
           scrollY={scrollY}
-          onClick={() => {
-            onHomeClick();
-            setOpenMenu(false);
-          }}
+          onClick={()=>setOpenMenu(false)}
           isOpen={openMenu}
         >
           Home
         </Div>
-        <Div scrollY={scrollY} onClick={() => {
-            onAboutClick();
-            setOpenMenu(false);
-          }} isOpen={openMenu}>
+        <Div
+          scrollY={scrollY}
+          onClick={()=>setOpenMenu(false)}
+          isOpen={openMenu}
+        >
           About me
         </Div>
-        <Div scrollY={scrollY} onClick={() => {
-            onSkillClick();
-            setOpenMenu(false);
-          }} isOpen={openMenu}>
-          Skills
+        <Div
+          scrollY={scrollY}
+          onClick={()=>setOpenMenu(false)}
+          isOpen={openMenu}
+        >
+          Pair Review
         </Div>
-        <Div scrollY={scrollY} onClick={() => {
-            onProjectClick();
-            setOpenMenu(false);
-          }} isOpen={openMenu}>
-          Projects
-        </Div>
-        <Div scrollY={scrollY} onClick={() => {
-            onContactClick();
-            setOpenMenu(false);
-          }} isOpen={openMenu}>
-          Contact
+        <Div
+          scrollY={scrollY}
+          onClick={()=>setOpenMenu(false)}
+          isOpen={openMenu}
+        >
+          Career
         </Div>
       </Nav>
     </Container>
@@ -147,5 +140,11 @@ function mapStateToProps(state) {
     scrollY: state.scroll.scrollY,
   };
 }
-
-export default connect(mapStateToProps)(Header);
+function mapDispatchToProps(dispatch) {
+  return {
+    getScrollY: (data) => {
+      dispatch(getScrollY(data));
+    },
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(InfoHeader);
