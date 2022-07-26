@@ -9,6 +9,7 @@ const Container = styled.div`
   border-radius: 1rem;
   margin: 0 auto 2rem;
   width: 80%;
+  box-shadow: 5px 7px 10px black;
 `;
 const Title = styled.div`
   padding-bottom: 0.5rem;

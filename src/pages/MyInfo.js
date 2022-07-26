@@ -22,22 +22,6 @@ const Contents = styled.div`
     align-content: center;
   }
 `;
-const Button = styled.div`
-  width: 50%;
-  padding: 0.8rem;
-  height: 3rem;
-  margin: 5px auto;
-  max-width: 14rem;
-  border: none;
-  border-radius: 10rem;
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-  font-weight: 400;
-  text-decoration: none;
-  background-color: rgb(244, 97, 58);
-  cursor: pointer;
-`;
 const MyInfo = forwardRef((props, ref) => {
   const info = [
     { img: "user", lable: "이름", value: "윤선웅" },

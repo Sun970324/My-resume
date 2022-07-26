@@ -18,23 +18,23 @@ const datas = [
         lable: "주요기능",
         value:
           "음식점 및 카페 예약, 태그 및 검색 기능, 고객 / 점주 알람, 리뷰 작성",
-          isLink: false
+        isLink: false,
       },
       {
         lable: "GitHub",
         value: "https://github.com/codestates/NoStanding",
-        isLink: true
+        isLink: true,
       },
       {
         lable: "URL",
         value: "https://www.semicolon-nostanding.com/",
-        isLink: true
+        isLink: true,
       },
       {
         lable: "발표자료",
         value:
           "https://codestates.notion.site/7-semicolon-Nostanding-297a7ffb182f4d1b852847f2628e6c26",
-          isLink: true
+        isLink: true,
       },
     ],
   },
@@ -55,40 +55,44 @@ const datas = [
       {
         lable: "주요기능",
         value: "밀키트 추천, 검색, 식단 추가하기, 식단 칼로리 계산",
-        isLink: false
+        isLink: false,
       },
       {
         lable: "GitHub",
         value: "https://github.com/codestates/Defat",
-        isLink: true
+        isLink: true,
       },
       {
         lable: "URL",
         value: "http://semicolon-defat.com/",
-        isLink: true
+        isLink: true,
       },
     ],
   },
   {
     name: "Sun's log",
     date: "2022.07 (1주 / 1人 프로젝트)",
-    img: [],
+    img: [
+      "/img/sunslog/sunslog1.png",
+      "/img/sunslog/sunslog2.png",
+      "/img/sunslog/sunslog3.png",
+      "/img/sunslog/sunslog4.png",
+      "/img/sunslog/sunslog5.png",
+    ],
     mainDescript:
-      "지금 보시는 이 페이지 또한 하나의 미니 프로젝트로 기획했습니다. 저의 포트폴리오와 이력을 담아낸 페이지로 React를 이용하여 개발했으며, 재사용성을 고려하여 컴포넌트를 구현했습니다. UX,UI를 고려하여 만들었습니다.",
+      "지금 보시는 이 페이지 또한 하나의 미니 프로젝트로 개발했습니다. 저의 포트폴리오와 이력을 담아낸 페이지로 React를 이용하여 개발했으며, 재사용성을 고려하여 컴포넌트를 구현했습니다. 반응형 CSS, React-slick, 스크롤 이벤트를 이용하는 등 UX, UI를 고려하여 개발하였습니다.",
     tagDescript: [
       {
         lable: "주요기능",
-        value:
-          "자기소개, 인적 사항, GitHub 및 노션 링크, 프로젝트",
-          isLink: false
+        value: "자기소개, 인적 사항, GitHub 및 노션 링크, 프로젝트",
+        isLink: false,
       },
       {
         lable: "GitHub",
         value: "https://github.com/Sun970324/My-resume",
-        isLink: true
+        isLink: true,
       },
-      { lable: "URL", value: "추가예정", isLink: true
-    },
+      { lable: "URL", value: "https://d2a85jn5sydpym.cloudfront.net/", isLink: true },
     ],
   },
 ];
