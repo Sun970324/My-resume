@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
-import Introduce from "./pages/Introduce";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import PairReview from "./Introduce/PairReview";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/aboutme" element={<Introduce />} />
+        <Route path="/pairReview" element={<PairReview />} />
       </Routes>
       </Router>
     </>

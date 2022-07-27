@@ -10,7 +10,7 @@ const Container = styled.div`
   width: 100%;
   padding: 4rem 2rem;
   margin: 0 auto;
-  background-color: rgb(46, 142, 255);
+  background-color: rgb(28,128,159);
 `;
 
 const Projects = forwardRef((props, ref) => {

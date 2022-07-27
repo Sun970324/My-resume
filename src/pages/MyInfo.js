@@ -3,24 +3,19 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Tags from "../components/Tags";
 import Title from "../components/Title";
-const Article = styled.article`
-  display: block;
-`;
-const Container = styled.div`
+const Container = styled.article`
   width: 100%;
   padding: 4rem 2rem;
   margin: 0 auto;
 `;
-
-const Contents = styled.div`
+const Content = styled.div`
   display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   a {
     color: white;
     text-decoration: none;
-    width: 50%;
+    width: 10rem;
     padding: 0.8rem;
     height: 3rem;
     margin: 5px auto;
@@ -32,33 +27,79 @@ const Contents = styled.div`
     font-weight: 400;
     background-color: rgb(244, 97, 58);
     cursor: pointer;
-  }
-  @media (max-width: 650px) {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    :hover{
+      transform: scale(1.03);
+      transition: 0.2s;
+    }
   }
 `;
+const ImgDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  @media (max-width: 900px) {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+`;
+const Circle = styled.div`
+  width: 9rem;
+  height: 9rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(65, 65, 65, 0.1);
+  padding: 1.1rem;
+  margin: 0 2rem 2rem 0;
+`;
+const Img = styled.img`
+  width: 4rem;
+  margin: 0 0 10px;
+  align-self: center;
+`;
+const ImgText = styled.div`
+  font-size: 15px;
+  font-weight: 200;
+`;
+const Text = styled.div`
+  line-height: 2;
+  margin-bottom: 2rem;
+`;
 const MyInfo = forwardRef((props, ref) => {
-  const info = [
-    { img: "user", lable: "이름", value: "윤선웅" },
-    { img: "calinder", lable: "생년월일", value: "1997.03.24" },
-    { img: "pin", lable: "주소지", value: "경기도 수원시" },
-    { img: "phone", lable: "연락처", value: "010-2368-5202" },
-    { img: "email", lable: "이메일", value: "ysw5202222@gmail.com" },
+  const images = [
+    { src: "/img/intro1.png", label1: "전문분야", label2: "프론트엔드" },
+    { src: "/img/intro2.png", label1: "가치를 만드는", label2: "개발자" },
+    { src: "/img/intro3.png", label1: "긍정적인", label2: "마인드" },
+    { src: "/img/intro4.png", label1: "핵심가치", label2: "성장" },
   ];
+
   return (
-    <Article ref={ref}>
-      <Container>
-        <Title name={"About me"} />
-        <Contents>
-          {info.map((el, idx) => (
-            <Tags key={idx} img={el.img} lable={el.lable} value={el.value} />
+    <Container ref={ref}>
+      <Title name={"About me"} isWhite={false} />
+      <Content>
+        <ImgDiv>
+          {images.map((el, idx) => (
+            <Circle>
+              <Img key={idx} src={el.src} />
+              <ImgText>{el.label1}</ImgText>
+              <ImgText>{el.label2}</ImgText>
+            </Circle>
           ))}
-          <Link to="/aboutme">Read More →</Link>
-        </Contents>
-      </Container>
-    </Article>
+        </ImgDiv>
+        <Text>
+          지속적으로 성장하고 아이디어를 노트북 하나로 실현시킬 수 있는 것에
+          매력을 느껴 개발자의 길을 걷기로 했습니다.
+          <br />
+          문제나 장애물을 만나면 성장의 기회로 생각하고 해결하는 과정에서 보람을
+          느낍니다.
+          <br />
+          웹개발로 세상에 긍정적인 변화를 만들어 가치를 창출하는 것이 개발자로서
+          궁극적인 목표입니다.
+        </Text>
+        <Link to={"pairreview"}>페어 리뷰</Link>
+      </Content>
+    </Container>
   );
 });
 
