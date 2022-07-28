@@ -6,13 +6,18 @@ import { init, send } from "emailjs-com";
 const Article = styled.article`
   display: block;
 `;
-const Container = styled.form`
+const Container = styled.div`
+  width: 100%;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+`;
+const Form = styled.form`
   width: 100%;
   padding: 0 2rem 4rem;
   margin: 0 auto;
   background-color: white;
   width: 40%;
-`;
+`
 const Label = styled.div`
   align-self: start;
   margin: 4px;
@@ -81,14 +86,15 @@ const Contact = forwardRef((props, ref) => {
     setMessage("");
   };
   return (
-    <Article>
+    <Article ref={ref}>
+      <Container>
         <Title name={"Contact"} isWhite={false} />
         <InfoDiv>
         {info.map((el, idx) => (
             <Tags key={idx} img={el.img} lable={el.lable} value={el.value} />
           ))}
           </InfoDiv>
-      <Container ref={ref} onSubmit={sendEmail}>
+      <Form onSubmit={sendEmail}>
         <Label>* 이름</Label>
         <Input
           type="text"
@@ -113,6 +119,7 @@ const Contact = forwardRef((props, ref) => {
           onChange={(e) => setMessage(e.target.value)}
         />
         <Button>이메일 전송하기</Button>
+      </Form>
       </Container>
     </Article>
   );
