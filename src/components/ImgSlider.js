@@ -3,9 +3,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const Container = styled.div`
-  overflow: hidden;
-`;
+const Container = styled.div``;
 const StyledSlider = styled(Slider)`
   .slick-slide div {
     outline: none;
@@ -18,9 +16,8 @@ const Img = styled.img`
   width: 500px;
   object-fit: scale-down;
 `;
-function ImgSlider({ img, setCurrentImg }) {
+function ImgSlider({ img }) {
   const settings = {
-    beforeChange: (slide, newSlide) => setCurrentImg(newSlide + 1),
     dots: true,
     infinite: true,
     speed: 500,

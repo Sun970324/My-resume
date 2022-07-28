@@ -104,7 +104,7 @@ const Contact = forwardRef((props, ref) => {
         <Label>* Email</Label>
         <Input
           type="text"
-          placeholder="사용자 이메일을 입력해주세요."
+          placeholder="사용자의 이메일을 입력해주세요."
           onChange={(e) => setEmail(e.target.value)}
         />
         <Label>Message</Label>

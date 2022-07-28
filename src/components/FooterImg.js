@@ -15,7 +15,9 @@ const Img = styled.img`
 function FooterImg({logo}) {
   return (
   <Container>
+     <a href={logo === '/img/git-hub.png'? "https://github.com/Sun970324": "https://www.notion.so/b45d0a0494c14d98b57b43bc68adc359"} target="_blank" rel="noreferrer">
     <Img src={logo} alt={logo} />
+    </a>
   </Container>
   )
 }

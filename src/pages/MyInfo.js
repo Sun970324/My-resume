@@ -1,7 +1,6 @@
 import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Tags from "../components/Tags";
 import Title from "../components/Title";
 const Container = styled.article`
   width: 100%;
@@ -88,7 +87,7 @@ const MyInfo = forwardRef((props, ref) => {
           ))}
         </ImgDiv>
         <Text>
-          지속적으로 성장하고 아이디어를 노트북 하나로 실현시킬 수 있는 것에
+          아이디어를 노트북 하나로 실현시킬 수 있는 것에
           매력을 느껴 개발자의 길을 걷기로 했습니다.
           <br />
           문제나 장애물을 만나면 성장의 기회로 생각하고 해결하는 과정에서 보람을

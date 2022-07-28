@@ -94,7 +94,7 @@ const datas = [
         value: "https://github.com/Sun970324/My-resume",
         isLink: true,
       },
-      { lable: "URL", value: "https://d38hyiyauvg907.cloudfront.net/", isLink: true },
+      { lable: "URL", value: "https://d23eciz9y13y8o.cloudfront.net", isLink: true },
     ],
   },
 ];

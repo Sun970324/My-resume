@@ -51,7 +51,7 @@ const Img = styled.img`
   margin-bottom: 5rem;
   border: 2px solid rgb(244,97,58);
   object-fit: scale-down;
-  width: 100%;
+  max-width: 100%;
 `
 const GoBackDiv = styled.div`
   a {
