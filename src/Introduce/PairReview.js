@@ -1,3 +1,5 @@
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -20,7 +22,7 @@ const Container = styled.article`
     font-size: 1rem;
     text-align: center;
     font-weight: 400;
-    background-color: rgb(28,128,159);
+    background-color: rgb(46, 142, 255);
     cursor: pointer;
     :hover{
       transform: scale(1.03);
@@ -41,7 +43,7 @@ const HrLine = styled.hr`
   height: 0;
   margin: 1.5rem auto;
   border: none;
-  border-top: 0.2rem solid rgb(244,97,58);
+  border-top: 0.2rem solid rgb(46, 142, 255);
 `;
 const ImgContainer = styled.div`
   display: flex;
@@ -49,7 +51,7 @@ const ImgContainer = styled.div`
 `
 const Img = styled.img`
   margin-bottom: 5rem;
-  border: 2px solid rgb(244,97,58);
+  border: 2px solid rgb(46, 142, 255);
   object-fit: scale-down;
   max-width: 100%;
 `
@@ -60,7 +62,7 @@ const GoBackDiv = styled.div`
     right: 30px;
     color: white;
     text-decoration: none;
-    width: 6rem;
+    width: 4rem;
     padding: 0.8rem;
     height: 3rem;
     margin: 5rem 0;
@@ -70,7 +72,7 @@ const GoBackDiv = styled.div`
     font-size: 1rem;
     text-align: center;
     font-weight: 400;
-    background-color: rgb(28,128,159);
+    background-color: rgb(46, 142, 255);
     cursor: pointer;
     :hover{
       transform: scale(1.03);
@@ -83,7 +85,7 @@ const PairReview = forwardRef((props, ref) => {
   return (
     <Container>
       <GoBackDiv>
-      <Link to="/">Go Back</Link>
+      <Link to="/"><FontAwesomeIcon icon={faArrowLeft} /></Link>
       </GoBackDiv>
       <Title name={"Pair Review"} isWhite={false} />
       <Label>
@@ -102,7 +104,7 @@ const PairReview = forwardRef((props, ref) => {
       <ImgContainer>
       {images.map((el, idx)=> <Img key={idx} src={el} />)}
       </ImgContainer>
-      <Link to="/">Go Back</Link>
+      <Link to="/"><FontAwesomeIcon icon={faArrowLeft} /></Link>
     </Container>
   );
 });

@@ -50,7 +50,7 @@ function Home({ getScroll }) {
         onProjectClick={onProjectClick}
         onContactClick={onContactClick}
       />
-      <Main ref={homeRef} onAboutClick={onAboutClick} />
+      <Main ref={homeRef} />
       <MyInfo ref={aboutRef} />
       <Skills ref={skillRef} />
       <Projects ref={projectRef} />

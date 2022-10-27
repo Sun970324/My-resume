@@ -8,7 +8,7 @@ const Container = styled.div`
   width: 19rem;
   flex-shrink: 0;
   height: fit-content;
-  @media (max-width: 1050px) {
+  @media (max-width: 1150px) {
     width: 17rem;
   };
   @media (max-width: 670px) {
@@ -33,8 +33,8 @@ const Title = styled.div`
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #ccc;
   font-weight: bold;
-  font-size: 1.5rem;
-  color: rgb(244, 97, 58);
+  font-size: 1.7rem;
+  color: rgb(46, 142, 255);
 `;
 const Img = styled.img`
   width: 100%;
@@ -44,7 +44,7 @@ function Skill({ name, src }) {
   return (
     <Container>
       <Title>{name}</Title>
-      <Img src={src} alt={src} />
+      {src.map((img, i)=> <Img key={i} src={img} alt={img} />)}
     </Container>
   );
 }

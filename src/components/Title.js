@@ -16,6 +16,7 @@ const Lable = styled.div`
   border-bottom-style: solid;
   font-weight: 400;
   line-height: 1.5;
+  font-weight: 700;
 `;
 function Title({ name, isWhite }) {
   return (

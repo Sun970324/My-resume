@@ -16,7 +16,10 @@ const Form = styled.form`
   padding: 0 2rem 4rem;
   margin: 0 auto;
   background-color: white;
-  width: 40%;
+  width: 30rem;
+  @media (max-width: 650px) {
+    width: 90%;
+  }
 `
 const Label = styled.div`
   align-self: start;

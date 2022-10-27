@@ -24,7 +24,7 @@ const Content = styled.div`
     font-size: 1rem;
     text-align: center;
     font-weight: 400;
-    background-color: rgb(244, 97, 58);
+    background-color: rgb(46, 142, 255);
     cursor: pointer;
     :hover{
       transform: scale(1.03);
